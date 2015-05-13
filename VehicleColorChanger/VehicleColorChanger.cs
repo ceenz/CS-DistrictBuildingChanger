@@ -20,7 +20,12 @@ namespace VehicleColorChanger
             get { return "Customize vehicle colors."; }
         }
 
-        private bool m_initialized = false;
+        public static bool Initialized
+        {
+            get { return m_initialized; }
+        }
+
+        private static bool m_initialized = false;
 
         public override void OnLevelLoaded(LoadMode mode)
         {
@@ -49,7 +54,7 @@ namespace VehicleColorChanger
             }
         }
 
-        public void LoadConfig()
+        public static void LoadConfig()
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(VehicleColorInfo[]));
             VehicleColorInfo[] colors;
@@ -93,7 +98,7 @@ namespace VehicleColorChanger
             }
         }
 
-        public void SaveConfig()
+        public static void SaveConfig()
         {
             int count = PrefabCollection<VehicleInfo>.LoadedCount();
 
