@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVehicleColorInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <VehicleColorInfo name="Police Car">
+    <color0>#FFFFFF</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#FFFFFF</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Fire Truck">
+    <color0>#FFFFFF</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#FFFFFF</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Oil Truck">
+    <color0>#FFFF19</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#009933</color2>
+    <color3>#E60000</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Oil Truck Trailer">
+    <color0>#FFFF19</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#009933</color2>
+    <color3>#E60000</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Ore Truck">
+    <color0>#2952CC</color0>
+    <color1>#FFFF19</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#333333</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Ore Truck Trailer">
+    <color0>#BDA2A2</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#AACA94</color2>
+    <color3>#A9BAC3</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Tractor">
+    <color0>#009900</color0>
+    <color1>#009900</color1>
+    <color2>#8F0000</color2>
+    <color3>#FFCC00</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Tractor Trailer">
+    <color0>#FFFF19</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#1975FF</color2>
+    <color3>#333333</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Bus">
+    <color0>#FF8300</color0>
+    <color1>#FF9901</color1>
+    <color2>#FFA300</color2>
+    <color3>#FFB800</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Train Engine">
+    <color0>#FF8300</color0>
+    <color1>#FF8300</color1>
+    <color2>#FF8300</color2>
+    <color3>#FF8300</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Train Passenger">
+    <color0>#FF8300</color0>
+    <color1>#FF8300</color1>
+    <color2>#FF8300</color2>
+    <color3>#FF8300</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Train Cargo">
+    <color0>#085A94</color0>
+    <color1>#000000</color1>
+    <color2>#085A94</color2>
+    <color3>#6E4A00</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Metro">
+    <color0>#FFFFFF</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#FFFFFF</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Aircraft Passenger">
+    <color0>#FF3333</color0>
+    <color1>#3333FF</color1>
+    <color2>#FF33CC</color2>
+    <color3>#FFFF66</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Ship Passenger">
+    <color0>#FF7878</color0>
+    <color1>#0066CC</color1>
+    <color2>#9EFF78</color2>
+    <color3>#D3FFF7</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Train Cargo Engine">
+    <color0>#B22400</color0>
+    <color1>#085A94</color1>
+    <color2>#B2B2B2</color2>
+    <color3>#FFCC00</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Ship Cargo">
+    <color0>#A63939</color0>
+    <color1>#4F9B45</color1>
+    <color2>#FFFF4D</color2>
+    <color3>#0066FF</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Sedan">
+    <color0>#FFFFFF</color0>
+    <color1>#5F5F5F</color1>
+    <color2>#FF3300</color2>
+    <color3>#1A1A1A</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Sports-car">
+    <color0>#FF0000</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#99FF66</color2>
+    <color3>#191919</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Station-wagon">
+    <color0>#FFFFFF</color0>
+    <color1>#CC0000</color1>
+    <color2>#808080</color2>
+    <color3>#006600</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Suv">
+    <color0>#191919</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#663300</color2>
+    <color3>#F5EBCC</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Scooter">
+    <color0>#FFFFFF</color0>
+    <color1>#333333</color1>
+    <color2>#99FF99</color2>
+    <color3>#FF5050</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Hatchback">
+    <color0>#F3F3F3</color0>
+    <color1>#CC0000</color1>
+    <color2>#3399FF</color2>
+    <color3>#333333</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Lorry">
+    <color0>#FFFFFF</color0>
+    <color1>#98A6A6</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#4C3D00</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Van">
+    <color0>#FFFFFF</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFCC00</color2>
+    <color3>#98A6A6</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Donut Van">
+    <color0>#FFFFFF</color0>
+    <color1>#FFD800</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#474547</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Bugspray Van">
+    <color0>#50BD50</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#51B551</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="hotdog-van">
+    <color0>#E60000</color0>
+    <color1>#FFE200</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#FFD800</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Ambulance">
+    <color0>#FFFFFF</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#FFFFFF</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Hearse">
+    <color0>#FFFFFF</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#FFFFFF</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Forestry Truck">
+    <color0>#FFFF19</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#009933</color2>
+    <color3>#5E717D</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Forestry Trailer">
+    <color0>#B98989</color0>
+    <color1>#BEC199</color1>
+    <color2>#B98989</color2>
+    <color3>#5E717D</color3>
+  </VehicleColorInfo>
+  <VehicleColorInfo name="Garbage Truck">
+    <color0>#FFFFFF</color0>
+    <color1>#FFFFFF</color1>
+    <color2>#FFFFFF</color2>
+    <color3>#FFFFFF</color3>
+  </VehicleColorInfo>
+</ArrayOfVehicleColorInfo>
