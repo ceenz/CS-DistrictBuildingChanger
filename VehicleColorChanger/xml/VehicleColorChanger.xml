@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfVehicleColorInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <VehicleColorInfo name="Police Car">
     <color0>#FFFFFF</color0>
@@ -13,10 +13,10 @@
     <color3>#FFFFFF</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Oil Truck">
-    <color0>#E6DCD2</color0>
-    <color1>#8C8C82</color1>
-    <color2>#B4AF96</color2>
-    <color3>#32321E</color3>
+    <color0>#ffffff</color0>
+    <color1>#ffffff</color1>
+    <color2>#e2e1df</color2>
+    <color3>#7c756b</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Oil Truck Trailer">
     <color0>#B98989</color0>
@@ -25,22 +25,22 @@
     <color3>#9DBDD0</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Ore Truck">
-    <color0>#FF8787</color0>
-    <color1>#FFF181</color1>
-    <color2>#BAFF9F</color2>
-    <color3>#ACDCFF</color3>
+    <color0>#ffffff</color0>
+    <color1>#ffffff</color1>
+    <color2>#dfe4e8</color2>
+    <color3>#5776b8</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Ore Truck Trailer">
-    <color0>#C11C27</color0>
+    <color0>#BDA2A2</color0>
     <color1>#A8A779</color1>
     <color2>#AACA94</color2>
     <color3>#A9BAC3</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Tractor">
-    <color0>#DC5A00</color0>
-    <color1>#7D9664</color1>
-    <color2>#506496</color2>
-    <color3>#BEBE78</color3>
+    <color0>#d3b71e</color0>
+    <color1>#91301d</color1>
+    <color2>#3d466e</color2>
+    <color3>#306b49</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Tractor Trailer">
     <color0>#FF0000</color0>
@@ -103,70 +103,70 @@
     <color3>#7624AA</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Sedan">
-    <color0>#FFFFFF</color0>
-    <color1>#AAA096</color1>
-    <color2>#C85000</color2>
-    <color3>#A0B4C8</color3>
+    <color0>#88b2d1</color0>
+    <color1>#d3b71e</color1>
+    <color2>#91301d</color2>
+    <color3>#151d26</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Sports-car">
-    <color0>#BE3200</color0>
-    <color1>#FFE664</color1>
-    <color2>#0F001E</color2>
-    <color3>#8C9696</color3>
+    <color0>#9c9193</color0>
+    <color1>#d3b71e</color1>
+    <color2>#91301d</color2>
+    <color3>#3d466e</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Station-wagon">
-    <color0>#021F7D</color0>
-    <color1>#503F1E</color1>
-    <color2>#191815</color2>
-    <color3>#DCD2C8</color3>
+    <color0>#9c9193</color0>
+    <color1>#7c756b</color1>
+    <color2>#306b49</color2>
+    <color3>#233e4c</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Suv">
-    <color0>#BEBEB4</color0>
-    <color1>#404040</color1>
-    <color2>#505A32</color2>
-    <color3>#78786E</color3>
+    <color0>#dfe4e8</color0>
+    <color1>#75797d</color1>
+    <color2>#863242</color2>
+    <color3>#020813</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Scooter">
-    <color0>#FF3F3F</color0>
-    <color1>#5092FF</color1>
-    <color2>#5EB76A</color2>
-    <color3>#FFB32B</color3>
+    <color0>#dfe4e8</color0>
+    <color1>#75797d</color1>
+    <color2>#863242</color2>
+    <color3>#020813</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Hatchback">
-    <color0>#FFFFFF</color0>
-    <color1>#B4AA8C</color1>
-    <color2>#647896</color2>
-    <color3>#8C8782</color3>
+    <color0>#e2e1df</color0>
+    <color1>#5776b8</color1>
+    <color2>#3d466e</color2>
+    <color3>#020403</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Lorry">
-    <color0>#FFFFFF</color0>
-    <color1>#FFFFFF</color1>
-    <color2>#FFFFFF</color2>
-    <color3>#FFFFFF</color3>
+    <color0>#ffffff</color0>
+    <color1>#ffffff</color1>
+    <color2>#dfe4e8</color2>
+    <color3>#5776b8</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Van">
-    <color0>#D2BE5F</color0>
-    <color1>#4C9BD3</color1>
-    <color2>#DCD2D2</color2>
-    <color3>#98A6A6</color3>
+    <color0>#ffffff</color0>
+    <color1>#ffffff</color1>
+    <color2>#e2e1df</color2>
+    <color3>#3d466e</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Donut Van">
-    <color0>#A7419B</color0>
-    <color1>#A14E9B</color1>
-    <color2>#B772B7</color2>
-    <color3>#C7A0C6</color3>
+    <color0>#F9AAF0</color0>
+    <color1>#FFA6F8</color1>
+    <color2>#F8A6F9</color2>
+    <color3>#ECA6EA</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Bugspray Van">
-    <color0>#476B47</color0>
-    <color1>#5A845A</color1>
-    <color2>#719F71</color2>
-    <color3>#92B592</color3>
+    <color0>#306b49</color0>
+    <color1>#306b49</color1>
+    <color2>#306b49</color2>
+    <color3>#306b49</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="hotdog-van">
-    <color0>#FF0000</color0>
-    <color1>#FFE200</color1>
-    <color2>#FF0000</color2>
-    <color3>#FFD800</color3>
+    <color0>#91301d</color0>
+    <color1>#91301d</color1>
+    <color2>#d3b71e</color2>
+    <color3>#d3b71e</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Ambulance">
     <color0>#FFFFFF</color0>
@@ -181,10 +181,10 @@
     <color3>#FFFFFF</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Forestry Truck">
-    <color0>#FF8787</color0>
-    <color1>#FFF181</color1>
-    <color2>#BAFF9F</color2>
-    <color3>#ACDCFF</color3>
+    <color0>#d3b71e</color0>
+    <color1>#91301d</color1>
+    <color2>#3d466e</color2>
+    <color3>#306b49</color3>
   </VehicleColorInfo>
   <VehicleColorInfo name="Forestry Trailer">
     <color0>#B98989</color0>
