@@ -26,6 +26,7 @@ namespace VehicleColorChanger
         }
 
         private static bool m_initialized = false;
+        private static FileSystemWatcher m_watcher = new FileSystemWatcher();
 
         public override void OnLevelLoaded(LoadMode mode)
         {
@@ -33,6 +34,16 @@ namespace VehicleColorChanger
                 return;
 
             m_initialized = true;
+
+            if (!m_watcher.EnableRaisingEvents)
+            {
+                m_watcher.Filter = "VehicleColorChanger.xml";
+                m_watcher.NotifyFilter = NotifyFilters.LastWrite;
+                m_watcher.Changed += new FileSystemEventHandler(OnFileChanged);
+
+                m_watcher.EnableRaisingEvents = true;
+            }
+
             LoadConfig();
         }
 
@@ -52,6 +63,11 @@ namespace VehicleColorChanger
                 SaveConfig();
                 m_initialized = false;
             }
+        }
+
+        private static void OnFileChanged(object source, FileSystemEventArgs e)
+        {
+            if (m_initialized) LoadConfig();
         }
 
         public static void LoadConfig()

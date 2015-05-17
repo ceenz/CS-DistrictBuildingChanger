@@ -44,7 +44,7 @@ namespace VehicleColorChanger
                 }
             }
         }
-
+        
         public System.Xml.Schema.XmlSchema GetSchema()
         {
             return null;
@@ -84,13 +84,7 @@ namespace VehicleColorChanger
 
         public static implicit operator Color(HexaColor c)
         {
-            Color temp = new Color();
-            temp.a = 1f;
-            temp.r = c.r;
-            temp.g = c.g;
-            temp.b = c.b;
-
-            return temp;
+            return new Color(c.r, c.g, c.b, 1f);
         }
     }
 }
