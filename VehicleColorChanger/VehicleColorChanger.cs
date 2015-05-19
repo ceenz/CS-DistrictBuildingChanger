@@ -1,5 +1,6 @@
 ﻿using ICities;
 using UnityEngine;
+using ColossalFramework;
 
 using System;
 using System.Collections.Generic;
@@ -112,6 +113,28 @@ namespace VehicleColorChanger
                     prefab.m_color3 = colors[i].color3;
                 }
             }
+
+            patchPoliceCar();
+        }
+
+        public static void patchPoliceCar()
+        {
+            ColossalFramework.Importers.Image img;
+            VehicleInfo prefab = PrefabCollection<VehicleInfo>.GetLoaded(0);;
+
+            img = new ColossalFramework.Importers.Image(Properties.Resources.Police_Main);
+            prefab.m_material.SetTexture("_MainTex", img.CreateTexture());
+            img = new ColossalFramework.Importers.Image(Properties.Resources.Police_LOD_Main);
+            Singleton<VehicleManager>.instance.m_lodRgbAtlas = img.CreateTexture();
+
+            //prefab.m_lodMaterial.SetTexture("_MainTex", img.CreateTexture());
+
+            img = new ColossalFramework.Importers.Image(Properties.Resources.Police_ACI);
+            prefab.m_material.SetTexture("_ACIMap", img.CreateTexture());
+            img = new ColossalFramework.Importers.Image(Properties.Resources.Police_LOD_ACI);
+            Singleton<VehicleManager>.instance.m_lodAciAtlas = img.CreateTexture();
+
+            //prefab.m_lodMaterial.SetTexture("_ACIMap", img.CreateTexture());*/
         }
 
         public static void SaveConfig()
