@@ -125,7 +125,7 @@ namespace VehicleColorChanger
                 VehicleInfo prefab = PrefabCollection<VehicleInfo>.GetLoaded(i);
 
                 VehicleColorInfo info = new VehicleColorInfo();
-                info.name = prefab.name;
+                info.name = System.Security.SecurityElement.Escape(prefab.name);
                 info.color0 = prefab.m_color0;
                 info.color1 = prefab.m_color1;
                 info.color2 = prefab.m_color2;
@@ -136,6 +136,7 @@ namespace VehicleColorChanger
 
             using (FileStream stream = new FileStream("VehicleColorChanger.xml", FileMode.OpenOrCreate))
             {
+                stream.SetLength(0);
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(VehicleColorInfo[]));
                 xmlSerializer.Serialize(stream, list.ToArray());
             }
