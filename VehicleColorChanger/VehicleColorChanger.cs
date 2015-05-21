@@ -97,8 +97,15 @@ namespace VehicleColorChanger
         /// </summary>
         public static void LoadConfig()
         {
+            if (!File.Exists("VehicleColorChanger.xml"))
+            {
+                Debug.Log("Configuration file not found. Creating new configuration file.");
+                SaveConfig();
+                return;
+            }
+
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(VehicleColorInfo[]));
-            VehicleColorInfo[] colors;
+            VehicleColorInfo[] colors = null;
 
             try
             {
@@ -108,18 +115,14 @@ namespace VehicleColorChanger
                     colors = xmlSerializer.Deserialize(stream) as VehicleColorInfo[];
                 }
             }
-            catch (FileNotFoundException)
-            {
-                Debug.Log("Configuration file not found. Creating new configuration file.");
-                SaveConfig();
-                return;
-            }
             catch (Exception e)
             {
                 // Couldn't deserialize (XML malformed?)
                 Debug.LogException(e);
                 return;
             }
+
+            if (colors == null) return;
 
             // Applying new colors to each prefabs
             for (int i = 0; i < colors.Length; i++)
@@ -141,14 +144,12 @@ namespace VehicleColorChanger
         /// </summary>
         public static void SaveConfig()
         {
-            int count = PrefabCollection<VehicleInfo>.LoadedCount();
-
             List<VehicleColorInfo> list = new List<VehicleColorInfo>();
 
             // Compiling each prefab colors into a list
-            for (uint i = 0; i < count; i++)
+            for (uint i = 0; i < PrefabCollection<VehicleInfo>.PrefabCount(); i++)
             {
-                VehicleInfo prefab = PrefabCollection<VehicleInfo>.GetLoaded(i);
+                VehicleInfo prefab = PrefabCollection<VehicleInfo>.GetPrefab(i);
 
                 VehicleColorInfo info = new VehicleColorInfo();
                 info.name = prefab.name;
@@ -164,11 +165,20 @@ namespace VehicleColorChanger
             if (list.Count == 0) return;
 
             // Serializing the list
-            using (FileStream stream = new FileStream("VehicleColorChanger.xml", FileMode.OpenOrCreate))
+            try
             {
-                stream.SetLength(0); // Emptying the file !!!
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(VehicleColorInfo[]));
-                xmlSerializer.Serialize(stream, list.ToArray());
+                using (FileStream stream = new FileStream("VehicleColorChanger.xml", FileMode.OpenOrCreate))
+                {
+                    stream.SetLength(0); // Emptying the file !!!
+                    XmlSerializer xmlSerializer = new XmlSerializer(typeof(VehicleColorInfo[]));
+                    xmlSerializer.Serialize(stream, list.ToArray());
+                }
+            }
+            catch (Exception e)
+            {
+                DebugOutputPanel.AddMessage(ColossalFramework.Plugins.PluginManager.MessageType.Warning,
+                    "Couldn't save configuration at \"" + Directory.GetCurrentDirectory() + "\"");
+                Debug.LogException(e);
             }
         }
 
