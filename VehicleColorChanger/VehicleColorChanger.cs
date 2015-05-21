@@ -20,12 +20,12 @@ namespace VehicleColorChanger
         {
             get { return "Customize vehicle colors."; }
         }
+        #endregion
 
         public static bool Initialized
         {
             get { return m_initialized; }
         }
-        #endregion
 
         private static bool m_initialized = false;
         private static FileSystemWatcher m_watcher = new FileSystemWatcher();
