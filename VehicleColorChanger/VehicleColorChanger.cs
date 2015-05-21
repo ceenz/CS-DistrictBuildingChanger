@@ -10,6 +10,7 @@ namespace VehicleColorChanger
 {
     public class VehicleColorChanger : LoadingExtensionBase, IUserMod
     {
+        #region IUserMod implementation
         public string Name
         {
             get { return "Vehicle Color Changer"; }
@@ -24,17 +25,24 @@ namespace VehicleColorChanger
         {
             get { return m_initialized; }
         }
+        #endregion
 
         private static bool m_initialized = false;
         private static FileSystemWatcher m_watcher = new FileSystemWatcher();
 
+        #region LoadingExtensionBase overrides
+        /// <summary>
+        /// Called when the level (game, map editor, asset editor) is loaded
+        /// </summary>
         public override void OnLevelLoaded(LoadMode mode)
         {
+            // Is it an actual game ?
             if (mode != LoadMode.LoadGame && mode != LoadMode.NewGame)
                 return;
 
             m_initialized = true;
 
+            // Watching configuration file for any changes
             if (!m_watcher.EnableRaisingEvents)
             {
                 m_watcher.Filter = "VehicleColorChanger.xml";
@@ -44,11 +52,16 @@ namespace VehicleColorChanger
                 m_watcher.EnableRaisingEvents = true;
             }
 
+            // Loading the configuration
             LoadConfig();
         }
 
+        /// <summary>
+        /// Called when the level is unloaded
+        /// </summary>
         public override void OnLevelUnloading()
         {
+            // Saving the configuration when leaving the game (via Load Game)
             if(m_initialized)
             {
                 SaveConfig();
@@ -56,20 +69,32 @@ namespace VehicleColorChanger
             }
         }
 
+        /// <summary>
+        /// Called when the instance of the class is released
+        /// </summary>
         public override void OnReleased()
         {
+            // Saving the configuration when leaving the game (via Exit Game)
             if (m_initialized)
             {
                 SaveConfig();
                 m_initialized = false;
             }
         }
+        #endregion
 
+        /// <summary>
+        /// FileSystemWatcher callback
+        /// </summary>
         private static void OnFileChanged(object source, FileSystemEventArgs e)
         {
+            // Applying changes
             if (m_initialized) LoadConfig();
         }
 
+        /// <summary>
+        /// Load and apply the configuration file
+        /// </summary>
         public static void LoadConfig()
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(VehicleColorInfo[]));
@@ -77,6 +102,7 @@ namespace VehicleColorChanger
 
             try
             {
+                // Trying to deserialize the configuration file
                 using (FileStream stream = new FileStream("VehicleColorChanger.xml", FileMode.Open))
                 {
                     colors = xmlSerializer.Deserialize(stream) as VehicleColorInfo[];
@@ -88,18 +114,14 @@ namespace VehicleColorChanger
                 SaveConfig();
                 return;
             }
-            catch (InvalidOperationException e)
+            catch (Exception e)
             {
-                    Debug.LogException(e);
-                    return;
-            }
-            catch (InvalidCastException e)
-            {
-                    Debug.LogException(e);
-                    return;
+                // Couldn't deserialize (XML malformed?)
+                Debug.LogException(e);
+                return;
             }
 
-
+            // Applying new colors to each prefabs
             for (int i = 0; i < colors.Length; i++)
             {
                 VehicleInfo prefab = PrefabCollection<VehicleInfo>.FindLoaded(colors[i].name);
@@ -114,18 +136,22 @@ namespace VehicleColorChanger
             }
         }
 
+        /// <summary>
+        /// Save the configuration file
+        /// </summary>
         public static void SaveConfig()
         {
             int count = PrefabCollection<VehicleInfo>.LoadedCount();
 
             List<VehicleColorInfo> list = new List<VehicleColorInfo>();
 
+            // Compiling each prefab colors into a list
             for (uint i = 0; i < count; i++)
             {
                 VehicleInfo prefab = PrefabCollection<VehicleInfo>.GetLoaded(i);
 
                 VehicleColorInfo info = new VehicleColorInfo();
-                info.name = System.Security.SecurityElement.Escape(prefab.name);
+                info.name = prefab.name;
                 info.color0 = prefab.m_color0;
                 info.color1 = prefab.m_color1;
                 info.color2 = prefab.m_color2;
@@ -134,9 +160,13 @@ namespace VehicleColorChanger
                 list.Add(info);
             }
 
+            // The list shouldn't be empty
+            if (list.Count == 0) return;
+
+            // Serializing the list
             using (FileStream stream = new FileStream("VehicleColorChanger.xml", FileMode.OpenOrCreate))
             {
-                stream.SetLength(0);
+                stream.SetLength(0); // Emptying the file !!!
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(VehicleColorInfo[]));
                 xmlSerializer.Serialize(stream, list.ToArray());
             }
